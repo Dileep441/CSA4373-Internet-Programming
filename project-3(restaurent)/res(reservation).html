@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Reservation</title>
+    <style>
+        .container {
+            border-radius: 20px;
+            background-color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    background-image: url("resint2.png");
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="submit"] {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+    var guests = document.getElementById('guests').value;
+
+    console.log('Reservation Details:');
+    console.log('Date:', date);
+    console.log('Time:', time);
+    console.log('Number of Guests:', guests);
+});
+function res(){
+    alert("Reservation Successfull!!");
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Make a Reservation</h2>
+        <form id="reservationForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required><br>
+
+            <input type="submit" onclick=res() value="Submit">
+        </form>
+    </div>
+</body>
+</html>

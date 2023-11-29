@@ -1,0 +1,56 @@
+<!-- Displaying Given Data In Same page -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Details</title>
+<style>
+.container{
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: rgb(0, 165, 255, 0.25);
+width: 700px;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+margin-bottom: 10px;
+}
+button[type="submit"]
+{
+background-color: wheat;
+}
+</style>
+</head>
+<body>
+<center>
+<div class="container" id="container">
+<form id="myform">
+<b>Name: </b><input type="text" id="name" value=""><br/>
+<b>Mobile No: </b><input type="text" id="mobile" value=""><br/>
+<b>Password: </b><input type="password" id="pwd" value=""><br/>
+<b>Email: </b><input type="email" id="email" value=""><br/>
+<button type="submit">LOGIN</button>
+</form>
+</div>
+<div class="output" id="output">
+</div>
+<script>
+document.getElementById('myform').addEventListener('submit', function(event){
+event.preventDefault();
+const name=document.getElementById('name').value;
+const mobileno=document.getElementById('mobile').value;
+const pwd=document.getElementById('pwd').value;
+const email=document.getElementById('email').value;
+const output=document.getElementById('output');
+if(name==="" || email==="" || pwd===""){
+alert("Mandatory fields must be entered!")
+}
+else{
+output.innerHTML=`<h2>OUTPUT</h2><br/>
+<b>Name: </b> ${name}<br/>
+<b>Mobile No: </b> ${mobileno}<br/>
+<b>Email : </b> ${email}<br/>`
+}
+});
+</script>
+<center>
+</body>
+</html>
