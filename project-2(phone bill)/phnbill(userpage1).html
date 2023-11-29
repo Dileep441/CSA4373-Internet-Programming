@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5ed05;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+        .user button[type='button'] {
+            border-radius: 10px;
+            background-color: rgb(43, 255, 0);
+            color: rgb(0, 0, 0);
+            width: 180px;
+            height: 45px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <div class="user">
+        <form name="myform">
+        <button type="button" onClick="cal()"><b>Calculate Phone bill</b></button></a><br/><br/>
+        </form>
+    </div>
+    <script>
+        function cal(){
+            window.open("phnbill(userfinecal).html");
+        }
+    </script>
+</body>
+</html>
