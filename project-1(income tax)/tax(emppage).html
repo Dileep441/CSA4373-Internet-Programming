@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(158, 248, 183);
+            color:rgb(43, 36, 36)
+        }
+        div.emp button[type="button"]{
+            border-radius: 25px;
+            background-color: rgb(216, 42, 42);
+            color: rgb(255, 255, 245);
+            width: 180px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+        <h1>WELCOME TO EMPLOYEE PAGE!!</h1><br/>
+        <div class="emp">
+            <form name="myform">
+                <a href="tax(emppage).html"><button type="button" onClick="cal_tax()"><b>Calculate Tax</b></button></a><br/><br/>
+            </form>
+        </div>
+        <script>
+            function cal_tax(){
+                window.open("tax(caltax).html")
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Inputs</title>
+</head>
+<body>
+    <h1>Update Inputs</h1>
+    <form>
+        <label for="new_gross_pay">New Gross Pay:</label>
+        <input type="number" id="new_gross_pay" name="new_gross_pay"><br><br>
+        
+        <label for="new_hra">New House Rent Allowance:</label>
+        <input type="number" id="new_hra" name="new_hra"><br><br>
+        
+        <label for="new_pension">New Pension:</label>
+        <input type="number" id="new_pension" name="new_pension"><br><br>
+        
+        <label for="new_health_insurance">New Health Insurance:</label>
+        <input type="number" id="new_health_insurance" name="new_health_insurance"><br><br>
+        
+        <button type="button" onClick="updateInputs()"><b>Update Inputs</b></button>
+    </form>
+
+    <script>
+        function updateInputs() {
+            var newGrossPay = document.getElementById('new_gross_pay').value;
+            var newHRA = document.getElementById('new_hra').value;
+            var newPension = document.getElementById('new_pension').value;
+            var newHealthInsurance = document.getElementById('new_health_insurance').value;
+
+            document.getElementById('gross_pay').value = newGrossPay;
+            document.getElementById('hra').value = newHRA;
+            document.getElementById('pension').value = newPension;
+            document.getElementById('health_insurance').value = newHealthInsurance;
+        }
+    </script>
+</body>
+</html>
+)

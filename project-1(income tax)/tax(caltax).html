@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tax calculator</title>
+        <style>
+            body{
+                text-align: center;
+                background-color: cyan;
+                color: crimson;
+            }
+            div.caltax button[type="button"]{
+                border-radius: 25px;
+                background-color: rgb(84, 62, 231);
+                color: rgb(255, 255, 245);
+                width: 180px;
+                height: 45px;
+            }
+        </style>
+        <script>
+            function cal_tax() {
+
+            var gross_pay = parseFloat(document.getElementsByName('gross_pay')[0].value);
+            var hra = parseFloat(document.getElementsByName('hra')[0].value);
+            var pension = parseFloat(document.getElementsByName('pension')[0].value);
+            var health_insurance = parseFloat(document.getElementsByName('health_insurance')[0].value);
+
+            var net_taxable_income = (gross_pay * 12) - (hra * 12) - 50000 - Math.min(pension * 12, 150000) - (health_insurance * 12);
+            var tax = 0;
+
+            if (net_taxable_income <= 250000) {
+                tax = 0;
+            } else if (net_taxable_income > 250001 && net_taxable_income <= 500000) {
+                tax = 0.05 * (net_taxable_income - 250000);
+            } else if (net_taxable_income > 500001 && net_taxable_income <= 1000000) {
+                tax = 12500 + 0.2 * (net_taxable_income - 500000);
+            } else if (net_taxable_income > 1000001){
+                tax = 112500 + 0.3 * (net_taxable_income - 1000000);
+            }
+
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML ="<h2>Payable Tax: Rs." + tax.toFixed(2) + "</h2>";
+        }
+        </script>
+    </head>
+    <body>
+        <h1> TAX CALCULATOR</h1>
+        <div class="caltax">
+            <form action="calculate_tax.php" method="post">
+                <input type="number" name="gross_pay" placeholder="Gross Pay" required><br><br>
+                <input type="number" name="hra" placeholder="House Rent Allowance" required><br><br>
+                <input type="number" name="pension" placeholder="Pension" required><br><br>
+                <input type="number" name="health_insurance" placeholder="Health Insurance" required><br><br>
+                <button type="button" onClick="cal_tax()"><b>Calculate Tax</b></button></a><br/><br/>
+            </form>
+        </div>
+        <div id="result"></div>
+    </body>
+</html>
