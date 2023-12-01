@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Income Tax Calculator</h1>
+    <form id="taxForm">
+        <label for="grossPay">Gross Pay (Annual): </label>
+        <input type="number" id="grossPay" required><br>
+        <label for="houseRentAllowance">House Rent Allowance (Annual): </label>
+        <input type="number" id="houseRentAllowance" required><br>
+        <label for="pension">Pension (Annual): </label>
+        <input type="number" id="pension" required><br>
+        <label for="healthInsurance">Health Insurance (Annual): </label>
+        <input type="number" id="healthInsurance" required><br>
+        <button type="button" onclick="calculateTax()">Calculate Tax</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function calculateTax() {
+            const grossPay = parseFloat(document.getElementById('grossPay').value);
+            const houseRentAllowance = parseFloat(document.getElementById('houseRentAllowance').value);
+            const pension = parseFloat(document.getElementById('pension').value);
+            const healthInsurance = parseFloat(document.getElementById('healthInsurance').value);
+
+            const netTaxableIncome = (grossPay * 12) - (houseRentAllowance * 12) - 50000 - Math.min(pension * 12, 150000) - (healthInsurance * 12);
+
+            let tax = 0;
+
+            if (netTaxableIncome > 500000) {
+                if (netTaxableIncome <= 1000000) {
+                    tax = 12500 + 0.2 * (netTaxableIncome - 500000);
+                } else {
+                    tax = 112500 + 0.3 * (netTaxableIncome - 1000000);
+                }
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `Income Tax: ${tax}`;
+        }
+    </script>
+</body>
+</html>

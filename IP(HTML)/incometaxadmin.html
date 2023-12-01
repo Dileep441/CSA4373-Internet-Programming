@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <form id="adminLoginForm">
+        <label for="username">Username: </label>
+        <input type="text" id="username" required><br>
+        <label for="password">Password: </label>
+        <input type="password" id="password" required><br>
+        <button type="button" onclick="checkCredentials()">Login</button>
+    </form>
+
+    <script>
+        function checkCredentials() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Example admin credentials (Replace with your actual admin credentials)
+            const validUsername = "admin";
+            const validPassword = "password123";
+
+            if (username === validUsername && password === validPassword) {
+                window.location.href = "admin_dashboard.html"; // Redirect to admin dashboard
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

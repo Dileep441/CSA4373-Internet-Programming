@@ -1,0 +1,211 @@
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta charset="utf-8" />
+    <!-- Title and other stuffs -->
+    <title>
+	SIMATS - Food Login
+</title><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" /><meta name="keywords" content="Saveetha Foods" /><meta name="author" content="Basis Infotech" />
+    <!-- Stylesheets -->
+    <link href="foodapp1.css" rel="stylesheet" /><link rel="../Content/webasset/assets/stylesheet" href="style/font-awesome.css" /><link href="../Content/webasset/assets/style/style.css" rel="stylesheet" /><link href="../Content/webasset/assets/style/login.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../Content/webasset/assets/img/favicon/favicon.ico" /><link rel="apple-touch-icon" href="single-page-icon.png" /><link rel="apple-touch-icon" href="touch-icon-iphone.png" /><link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png" /><link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png" /><link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png" /><link rel="apple-touch-startup-image" href="launch.png" />
+    <!-- iPad Pro 12.9" (2048px x 2732px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-2048x2732.png" />
+
+    <!-- iPad Pro 11” (1668px x 2388px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1668x2388.png" />
+
+    <!-- iPad Pro 10.5" (1668px x 2224px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1668x2224.png" />
+
+    <!-- iPad Mini, Air (1536px x 2048px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="/apple-launch-1536x2048.png" />
+
+    <style>
+        @media screen and (orientation:portrait) {
+            #dvformid {
+                -ms-transform: rotate(-90deg); /* IE 9 */
+                -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+                transform: rotate(-90deg);
+                overflow: scroll;
+            }
+        }
+
+        .login-page .right-side {
+            padding: 0px 0px 100px !important;
+            background: #FFF;
+            background-size: cover;
+            min-height: 514px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="sAjuMp/psBqhImge0VHcNmq/22lMMwpk6WIgP20egY5/NJkdN9bKKYVTCVM6N9Tp+6p7fUKTGaJMCt7jA4C8BCC0JnKncoVtGCUoiPagsX8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="1b0ND7X7F/v7MazsS+7kRm232I9xrw1TP5PrFtwj6sXY3T0KuL+o5Zhz37xig7g6MfPzSLupMVroZnRGTwsfzlvYE61qFPpvwgG5mZNIAkeUWczRA5pvNIQYJCnVob3JDhqSUizOU/piLxjRzjer1/yKf9LNQsXn+fwTgwYoPwc=" />
+</div>
+        <div>
+            <section class="content-wrapper main-content clear-fix">
+                <div class="container">
+                    <div class="col-sm-10 col-sm-offset-1 login-page">
+                        <div class="col-sm-6 left-side hidden-xs">
+                            <h1>Welcome to SIMATS Foods
+                                <br />
+                            </h1>
+                            <p>Saveetha University</p>
+                            <br />
+                            <p class='hidden'>Login with Google</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="gplus hidden" href="#" target="_blank">Google</a>
+                        </div>
+                        <div class="col-sm-6 right-side">
+                            <img src="Content/img/sulogo.png" style="height: 125px; width: 100%; background: #ABB2B9;" class="ui-corner-all" data-corners="true" />
+                            <p>Don't have an account? Contact admin to create a new account.</p>
+                            <!--Form with header-->
+                            <div class="form">
+                                <div class="form-group">
+                                    <label for="EmailId">User Name</label>
+                                    <input name="txtusername" type="text" id="txtusername" class="form-control" placeholder="User Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password">Password</label>
+                                    <input name="txtpassword" type="password" id="txtpassword" class="form-control" placeholder="Password" />
+                                </div>
+                                <div class="form-group">
+                                    <button onclick="__doPostBack('btnLogin','')" id="btnLogin" type="submit" class="btn btn-deep-purple">
+                                        Login
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                    <a href="#" onclick="showforgot();">Forgot your password?</a>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <span id="lblerror" class="text-danger"></span>
+                                </div>
+								<div class="col-lg-12 text-center hidden">
+                                    <h4 class="text-danger">food.saveetha.com now moved to life.saveetha.com </h4>
+                                </div>
+								<div class="col-lg-12 text-center hidden">
+                                    <h4 class="text-danger">System will be down for maintenance activity - on 14th May 2023 from 11:00 PM to 11:55PM</h4>
+                                </div>
+                            </div>
+                            <!--/Form with header-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="widget-foot text-center">
+            <p class="copy">Copyright &copy; 2020 | <a href="http://saveetha.com" target="_blank" title="Saveetha University">SIMATS - Food</a> | <a href="Disclaimer.aspx" target="_blank" id="disclaimer-btn">Disclaimer </a>| <a href="PrivacyPolicy.aspx" target="_blank" id="privacy-btn">Privacy Policy </a></p>
+        </div>
+
+        <div id="mdlforgot" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Forgot password </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-lg-12 col-md-12 text-center">
+                                    <h3 class="text-danger">Pease contact mess admin to reset the password</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <div class="col-md-12 col-lg-12 text-center">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script src="../Content/webasset/assets/js/jquery.js"></script>
+    <script src="../Content/webasset/assets/js/bootstrap.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Opera 8.0+
+            var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+            // Firefox 1.0+
+            var isFirefox = typeof InstallTrigger !== 'undefined';
+
+            // Safari 3.0+ "[object HTMLElementConstructor]" 
+            var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+            // Internet Explorer 6-11
+            var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+            // Edge 20+
+            var isEdge = !isIE && !!window.StyleMedia;
+
+            // Chrome 1 - 71
+            var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+            // Blink engine detection
+            var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+            //var output = 'Detecting browsers by type:<hr>';
+            //output += 'isFirefox: ' + isFirefox + '<br>';
+            //output += 'isChrome: ' + isChrome + '<br>';
+            //output += 'isSafari: ' + isSafari + '<br>';
+            //output += 'isOpera: ' + isOpera + '<br>';
+            //output += 'isIE: ' + isIE + '<br>';
+            //output += 'isEdge: ' + isEdge + '<br>';
+            //output += 'isBlink: ' + isBlink + '<br>';
+            //alert(output);
+            //document.body.innerHTML = output;
+
+            //if (!isSafari)
+            //{
+            //    window.location = "Restriction.aspx";
+            //}
+        }
+
+      );
+    
+        function showforgot()
+        {
+            $('#mdlforgot').modal('show');
+        }
+
+    </script>
+</body>
+</html>
+
+

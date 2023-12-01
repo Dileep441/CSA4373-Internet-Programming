@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome Admin</h1>
+
+    <!-- Update Fields Form -->
+    <h2>Update Fields</h2>
+    <form action="update_fields.php" method="post">
+        <!-- Add fields to update employee input values -->
+        <input type="text" name="field_name" placeholder="Field Name" required><br><br>
+        <input type="text" name="new_value" placeholder="New Value" required><br><br>
+        <input type="submit" value="Update">
+    </form>
+
+    <!-- Modify Norms Form -->
+    <h2>Modify Norms</h2>
+    <form action="modify_norms.php" method="post">
+        <!-- Add fields to update tax calculation norms -->
+        <input type="text" name="norm_name" placeholder="Norm Name" required><br><br>
+        <input type="text" name="new_value" placeholder="New Value" required><br><br>
+        <input type="submit" value="Modify">
+    </form>
+</body>
+</html>
